@@ -4,11 +4,9 @@ alluc.com API
 
 With this early version, beta-testers can access allucs database of 21 million streaming and 24m download links and execute full text search queries to find video-hoster or cyberlocker links related to any topic. Beta access is free and allows queries retrieving up to 10,000 links per day.
 
-To sign up, choose the beta plan and complete checkout (no payment required) and you will receive your API key within the next 24 hours.
-http://api.alluc.com/products/api-10000-calls-month
+To [sign up](http://api.alluc.com/products/api-10000-calls-month), choose the beta plan and complete checkout (no payment required) and you will receive your API key within the next 24 hours.
 
-The API is also available on Mashape (with slightly higher latencies).
-https://www.mashape.com/alluc/video-and-download-link-search/
+The API is also available on [Mashape](https://www.mashape.com/alluc/video-and-download-link-search/) (with slightly higher latencies).
 
 ## Installation
 
@@ -36,6 +34,7 @@ Connect to mashape api
 ```ruby
 Alluc.connect('api_key', :mashape)
 ```
+Methods
 ```ruby
 Alluc.download_links('batman')
 Alluc.streaming_links('batman')
