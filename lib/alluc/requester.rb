@@ -16,7 +16,7 @@ class Alluc::Requester
         Hash.new.tap do |headers|
           headers['Accept'] = 'application/json'
           headers['Content-Type'] = 'application/json'
-          headers['X-Mashape-Key'] = api.api_key
+          headers['X-Mashape-Key'] = api.api_key if api.api_type == :mashape
         end
       end
 

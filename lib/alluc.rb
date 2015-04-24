@@ -9,9 +9,10 @@ require 'alluc/requester'
 
 module Alluc
 
-  def self.connect(api_key)
+  def self.connect(api_key, type = :alluc)
+    Excon.defaults[:ssl_verify_peer] = false
     Alluc::Api.instance.tap do |api|
-      api.connect(api_key)
+      api.connect(api_key, type)
     end
   end
 
