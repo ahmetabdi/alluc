@@ -1,0 +1,19 @@
+PATH
+  remote: .
+  specs:
+    alluc (0.1.0)
+      excon
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    excon (0.44.4)
+    rake (10.4.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  alluc!
+  bundler (~> 1.8)
+  rake (~> 10.0)
