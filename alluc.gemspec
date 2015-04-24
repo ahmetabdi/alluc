@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Ahmet Abdi"]
   spec.email         = ["ahmetabdi@gmail.com"]
 
-  spec.summary       = %q{}
-  spec.description   = %q{}
+  spec.summary       = %q{'Alluc API'}
+  spec.description   = %q{'ALluc API'}
   spec.homepage      = "https://github.com/ahmetabdi/alluc"
   spec.license       = "MIT"
 
@@ -21,5 +21,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.8"
   spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_dependency 'excon'
+  spec.add_dependency 'excon', '~> 0.44.4'
 end

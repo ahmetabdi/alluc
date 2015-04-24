@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    alluc (0.1.0)
-      excon
+    alluc (0.2.0)
+      excon (~> 0.44.4)
 
 GEM
   remote: https://rubygems.org/
