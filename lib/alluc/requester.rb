@@ -23,14 +23,16 @@ class Alluc::Requester
       def perform_request(&block)
         begin
           block.call
-        rescue
+        rescue Exception => e
+          puts e.message
         end
       end
 
       def parse_response(response)
         begin
-          JSON.parse(response.body, object_class: OpenStruct)
+          JSON.parse(response.body)
         rescue JSON::ParserError => e
+          puts e.message
         end
       end
 
