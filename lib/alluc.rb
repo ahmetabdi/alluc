@@ -1,6 +1,5 @@
 require 'alluc/version'
 require 'excon'
-require 'pry'
 require 'ostruct'
 require 'json'
 require 'cgi'
