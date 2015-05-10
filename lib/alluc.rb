@@ -18,12 +18,11 @@ module Alluc
   ['stream', 'download'].each do |action|
     define_singleton_method("#{action}_links") do |query, opts = {}|
       params = Hash.new.tap do |hash|
-        hash['query'] = CGI.escape(query)
-        hash['count'] = opts[:count] if opts[:count] # count - max-amount of returned results. Can be between 1 - 100
-        hash['from'] = opts[:from] if opts[:from] # from - where to start. For example if you want result 20-30, you will set count=10 and from=20
-        hash['getmeta'] = opts[:getmeta] if opts[:getmeta] # getmeta - If you want additional info on hosterlinks and source, set this to 1. Only use if you really need it as it might make for slower queries.
+        hash[:count] = opts[:count] if opts[:count] # count - max-amount of returned results. Can be between 1 - 100
+        hash[:from] = opts[:from] if opts[:from] # from - where to start. For example if you want result 20-30, you will set count=10 and from=20
+        hash[:getmeta] = opts[:getmeta] if opts[:getmeta] # getmeta - If you want additional info on hosterlinks and source, set this to 1. Only use if you really need it as it might make for slower queries.
       end
-      Alluc::Requester.get("search/#{action}", params)
+      Alluc::Requester.get("search/#{action}?query=#{CGI.escape(query)}", params)
     end
   end
 
